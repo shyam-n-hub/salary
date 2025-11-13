@@ -85,7 +85,7 @@ const Navbar = ({ user }) => {
 
           {user && (
             <>
-              <li>
+              {/* <li>
                 <Link to="/user-input" className={isActive("/user-input")}>
                   User Input
                 </Link>
@@ -94,7 +94,7 @@ const Navbar = ({ user }) => {
                 <Link to="/user-history" className={isActive("/user-history")}>
                   User History
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <button className="logout-btn" onClick={handleLogout}>
                   Logout

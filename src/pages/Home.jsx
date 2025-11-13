@@ -1,12 +1,18 @@
 import { useEffect, useState } from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const predictionUrl = 'https://predict-employee-salary.streamlit.app';
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handlePredictionClick = () => {
+    window.open(predictionUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="home-container">
@@ -35,7 +41,7 @@ const Home = () => {
           </p>
           
           <div className="hero-buttons">
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={handlePredictionClick}>
               <span>Get Started</span>
               <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -195,7 +201,7 @@ const Home = () => {
           <p className="cta-text">
             Experience intelligent salary estimation powered by advanced machine learning algorithms
           </p>
-          <button className="btn btn-cta">
+          <button className="btn btn-cta" onClick={handlePredictionClick}>
             <span>Start Prediction</span>
             <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
