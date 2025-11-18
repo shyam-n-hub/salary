@@ -293,7 +293,7 @@
 }
 
 .form-input-number[type=number] {
-  -moz-appearance: textfield;
+  --moz-appearance: textfield;
 }
 
 /* Slider Styles */
@@ -318,7 +318,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   outline: none;
-  -webkit-appearance: none;
+  --webkit-appearance: none;
   margin: 1rem 0;
 }
 
