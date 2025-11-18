@@ -1,0 +1,322 @@
+{
+  "baseSalary": 30000,
+
+  "experienceRules": [
+    { "value": "ENTR", "impact": 8000 },
+    { "value": "JR", "impact": 12000 },
+    { "value": "MID", "impact": 25000 },
+    { "value": "SEN", "impact": 45000 },
+    { "value": "LEAD", "impact": 55000 },
+    { "value": "EXEC", "impact": 70000 }
+  ],
+
+  "employmentRules": [
+    { "value": "Full-time", "impact": 20000 },
+    { "value": "Part-time", "impact": -5000 },
+    { "value": "Contract", "impact": -8000 },
+    { "value": "Freelance", "impact": -6000 },
+    { "value": "Intern", "impact": -15000 },
+    { "value": "Self-employed", "impact": 5000 }
+  ],
+
+  "companySizeRules": [
+    { "value": "Small", "impact": 5000 },
+    { "value": "Medium", "impact": 15000 },
+    { "value": "Large", "impact": 30000 },
+    { "value": "Startup", "impact": 8000 },
+    { "value": "Enterprise", "impact": 35000 }
+  ],
+
+  "educationRules": [
+    { "contains": "high school", "impact": -5000 },
+    { "contains": "diploma", "impact": 2000 },
+    { "contains": "bachelor", "impact": 8000 },
+    { "contains": "b.tech", "impact": 9000 },
+    { "contains": "be", "impact": 9000 },
+    { "contains": "master", "impact": 15000 },
+    { "contains": "m.tech", "impact": 16000 },
+    { "contains": "mba", "impact": 12000 },
+    { "contains": "phd", "impact": 30000 },
+    { "contains": "ms", "impact": 16000 }
+  ],
+
+  "remoteRatioRules": [
+    { "min": 0, "max": 10, "impact": -5000 },
+    { "min": 10, "max": 40, "impact": 0 },
+    { "min": 40, "max": 70, "impact": 5000 },
+    { "min": 70, "max": 90, "impact": 9000 },
+    { "min": 90, "max": 100.1, "impact": 12000 },
+    { "min": 0, "max": 100.1, "impact": 1000 }
+  ],
+
+  "jobTitleRules": [
+    { "contains": "software engineer", "impact": 20000 },
+    { "contains": "senior software engineer", "impact": 35000 },
+    { "contains": "junior software engineer", "impact": 12000 },
+    { "contains": "full stack", "impact": 23000 },
+    { "contains": "frontend", "impact": 18000 },
+    { "contains": "backend", "impact": 20000 },
+    { "contains": "web developer", "impact": 15000 },
+    { "contains": "mobile developer", "impact": 19000 },
+    { "contains": "android developer", "impact": 19000 },
+    { "contains": "ios developer", "impact": 21000 },
+
+    { "contains": "data scientist", "impact": 40000 },
+    { "contains": "senior data scientist", "impact": 55000 },
+    { "contains": "data analyst", "impact": 18000 },
+    { "contains": "senior data analyst", "impact": 26000 },
+    { "contains": "data engineer", "impact": 32000 },
+    { "contains": "big data", "impact": 35000 },
+
+    { "contains": "ml engineer", "impact": 38000 },
+    { "contains": "machine learning engineer", "impact": 38000 },
+    { "contains": "ai engineer", "impact": 40000 },
+    { "contains": "ai researcher", "impact": 42000 },
+    { "contains": "nlp engineer", "impact": 39000 },
+    { "contains": "computer vision", "impact": 39000 },
+    { "contains": "deep learning", "impact": 42000 },
+
+    { "contains": "devops", "impact": 30000 },
+    { "contains": "site reliability", "impact": 34000 },
+    { "contains": "sre", "impact": 34000 },
+    { "contains": "cloud engineer", "impact": 31000 },
+    { "contains": "cloud architect", "impact": 45000 },
+    { "contains": "platform engineer", "impact": 32000 },
+
+    { "contains": "product manager", "impact": 35000 },
+    { "contains": "project manager", "impact": 25000 },
+    { "contains": "program manager", "impact": 28000 },
+    { "contains": "delivery manager", "impact": 26000 },
+
+    { "contains": "qa engineer", "impact": 15000 },
+    { "contains": "test engineer", "impact": 14000 },
+    { "contains": "automation engineer", "impact": 20000 },
+    { "contains": "test automation", "impact": 21000 },
+    { "contains": "performance engineer", "impact": 23000 },
+
+    { "contains": "security engineer", "impact": 32000 },
+    { "contains": "cyber security", "impact": 32000 },
+    { "contains": "network engineer", "impact": 20000 },
+    { "contains": "systems engineer", "impact": 19000 },
+    { "contains": "systems administrator", "impact": 17000 },
+
+    { "contains": "ui designer", "impact": 17000 },
+    { "contains": "ux designer", "impact": 19000 },
+    { "contains": "ui/ux", "impact": 20000 },
+    { "contains": "product designer", "impact": 23000 },
+
+    { "contains": "database administrator", "impact": 22000 },
+    { "contains": "dba", "impact": 22000 },
+    { "contains": "etl", "impact": 21000 },
+
+    { "contains": "blockchain developer", "impact": 35000 },
+    { "contains": "game developer", "impact": 23000 },
+    { "contains": "embedded engineer", "impact": 21000 },
+    { "contains": "firmware engineer", "impact": 22000 },
+    { "contains": "hardware engineer", "impact": 20000 },
+    { "contains": "robotics", "impact": 32000 },
+    { "contains": "iot engineer", "impact": 23000 },
+
+    { "contains": "research engineer", "impact": 28000 },
+    { "contains": "research scientist", "impact": 38000 },
+    { "contains": "quantitative analyst", "impact": 42000 },
+    { "contains": "quant", "impact": 42000 },
+
+    { "contains": "intern", "impact": -12000 },
+    { "contains": "graduate engineer", "impact": 8000 },
+    { "contains": "trainee", "impact": 6000 },
+
+    { "contains": "engineering manager", "impact": 50000 },
+    { "contains": "technical lead", "impact": 35000 },
+    { "contains": "tech lead", "impact": 35000 },
+    { "contains": "principal engineer", "impact": 55000 },
+    { "contains": "architect", "impact": 45000 },
+    { "contains": "cto", "impact": 80000 }
+  ],
+
+  "locationRules": [
+    { "contains": "us", "impact": 60000 },
+    { "contains": "usa", "impact": 60000 },
+    { "contains": "united states", "impact": 60000 },
+
+    { "contains": "canada", "impact": 35000 },
+    { "contains": "ca", "impact": 30000 },
+
+    { "contains": "uk", "impact": 32000 },
+    { "contains": "united kingdom", "impact": 32000 },
+    { "contains": "germany", "impact": 30000 },
+    { "contains": "de", "impact": 28000 },
+    { "contains": "france", "impact": 26000 },
+    { "contains": "fr", "impact": 24000 },
+    { "contains": "netherlands", "impact": 26000 },
+    { "contains": "nl", "impact": 26000 },
+    { "contains": "sweden", "impact": 28000 },
+    { "contains": "norway", "impact": 28000 },
+    { "contains": "denmark", "impact": 28000 },
+
+    { "contains": "india", "impact": 8000 },
+    { "contains": "in", "impact": 8000 },
+    { "contains": "bangalore", "impact": 12000 },
+    { "contains": "bengaluru", "impact": 12000 },
+    { "contains": "hyderabad", "impact": 11000 },
+    { "contains": "pune", "impact": 10000 },
+    { "contains": "chennai", "impact": 9000 },
+    { "contains": "mumbai", "impact": 11000 },
+    { "contains": "delhi", "impact": 9000 },
+
+    { "contains": "australia", "impact": 26000 },
+    { "contains": "au", "impact": 26000 },
+    { "contains": "singapore", "impact": 32000 },
+    { "contains": "sg", "impact": 32000 },
+    { "contains": "japan", "impact": 28000 },
+    { "contains": "jp", "impact": 28000 },
+    { "contains": "china", "impact": 20000 },
+    { "contains": "cn", "impact": 20000 },
+
+    { "contains": "remote", "impact": 8000 },
+    { "contains": "europe", "impact": 22000 },
+    { "contains": "asia", "impact": 10000 },
+    { "contains": "africa", "impact": 5000 },
+    { "contains": "latin america", "impact": 8000 }
+  ],
+
+  "multiFieldRules": [
+    {
+      "conditions": {
+        "experience_level": ["SEN", "LEAD", "EXEC"],
+        "company_size": ["Large", "Enterprise"],
+        "remote_ratio_min": 50,
+        "remote_ratio_max": 100.1
+      },
+      "impact": 40000
+    },
+    {
+      "conditions": {
+        "experience_level": ["ENTR", "JR"],
+        "company_size": ["Startup", "Small"],
+        "remote_ratio_min": 0,
+        "remote_ratio_max": 60
+      },
+      "impact": -5000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["data scientist", "ml engineer"],
+        "education_contains": ["master", "phd"]
+      },
+      "impact": 30000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["software engineer", "full stack"],
+        "education_contains": ["bachelor", "b.tech", "be"],
+        "experience_level": ["MID", "SEN"]
+      },
+      "impact": 20000
+    },
+    {
+      "conditions": {
+        "employee_residence_contains": ["india", "in"],
+        "company_location_contains": ["us", "usa", "europe"]
+      },
+      "impact": 15000
+    },
+    {
+      "conditions": {
+        "employment_type": ["Contract", "Freelance"],
+        "remote_ratio_min": 80,
+        "remote_ratio_max": 100.1
+      },
+      "impact": 5000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["intern", "trainee"],
+        "education_contains": ["bachelor", "b.tech", "be"]
+      },
+      "impact": -8000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["engineering manager", "cto"],
+        "company_size": ["Large", "Enterprise"]
+      },
+      "impact": 60000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["qa", "test"],
+        "company_size": ["Large"],
+        "remote_ratio_min": 0,
+        "remote_ratio_max": 60
+      },
+      "impact": 5000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["devops", "site reliability", "sre"],
+        "remote_ratio_min": 50,
+        "remote_ratio_max": 100.1
+      },
+      "impact": 15000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["ui", "ux", "designer"],
+        "company_size": ["Startup", "Small"]
+      },
+      "impact": 7000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["blockchain", "quant"],
+        "education_contains": ["master", "phd"]
+      },
+      "impact": 35000
+    },
+    {
+      "conditions": {
+        "job_title_contains": ["support", "helpdesk"],
+        "company_size": ["Small", "Medium"]
+      },
+      "impact": -5000
+    },
+    {
+      "conditions": {
+        "employee_residence_contains": ["europe"],
+        "remote_ratio_min": 0,
+        "remote_ratio_max": 40
+      },
+      "impact": 10000
+    },
+    {
+      "conditions": {
+        "employee_residence_contains": ["india", "asia"],
+        "remote_ratio_min": 70,
+        "remote_ratio_max": 100.1
+      },
+      "impact": 8000
+    }
+  ],
+  "ageRules": [
+    { "min": 18, "max": 22, "impact": -3000 },
+    { "min": 23, "max": 28, "impact": 5000 },
+    { "min": 29, "max": 35, "impact": 10000 },
+    { "min": 36, "max": 45, "impact": 8000 },
+    { "min": 46, "max": 60, "impact": -2000 }
+  ],
+
+  "genderRules": [
+    { "value": "male", "impact": 2000 },
+    { "value": "female", "impact": 2500 },
+    { "value": "other", "impact": 1500 }
+  ],
+
+  "yearsExperienceRules": [
+    { "min": 0, "max": 1, "impact": -8000 },
+    { "min": 1, "max": 3, "impact": 5000 },
+    { "min": 3, "max": 6, "impact": 12000 },
+    { "min": 6, "max": 10, "impact": 20000 },
+    { "min": 10, "max": 20, "impact": 35000 }
+  ]
+}

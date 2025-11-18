@@ -48,7 +48,7 @@ const Navbar = ({ user }) => {
     <>
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <h2 className="navbar-logo" onClick={() => navigate("/")}>
-          PayPredictt
+          PayPredict
         </h2>
 
         <button
@@ -85,16 +85,16 @@ const Navbar = ({ user }) => {
 
           {user && (
             <>
-              {/* <li>
+              <li>
                 <Link to="/user-input" className={isActive("/user-input")}>
-                  User Input
+                   Predict Salary
                 </Link>
               </li>
               <li>
                 <Link to="/user-history" className={isActive("/user-history")}>
-                  User History
+                  Predicted History
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <button className="logout-btn" onClick={handleLogout}>
                   Logout

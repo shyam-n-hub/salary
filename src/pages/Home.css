@@ -11,6 +11,7 @@
   color: #fff;
   overflow-x: hidden;
   position: relative;
+  margin-top: 50px;
 }
 
 /* Animated Background */
@@ -131,7 +132,7 @@
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -156,7 +157,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -171,6 +172,7 @@
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -181,6 +183,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  min-width: 150px;
 }
 
 .btn::before {
@@ -329,7 +332,7 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -339,13 +342,14 @@
 }
 
 .section-subtitle {
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
   color: rgba(255, 255, 255, 0.6);
+  padding: 0 1rem;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -397,7 +401,7 @@
 .gradient-6 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
 
 .feature-card h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -405,6 +409,7 @@
 .feature-card p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 /* Technology Stack */
@@ -418,8 +423,8 @@
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
@@ -428,7 +433,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -444,14 +449,14 @@
 }
 
 .tech-logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   transition: transform 0.3s ease;
 }
@@ -462,7 +467,7 @@
 
 .tech-item span {
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
 }
 
 /* Stats Section */
@@ -476,13 +481,13 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
 }
 
 .stat-card {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -498,7 +503,7 @@
 }
 
 .stat-value {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -509,7 +514,7 @@
 
 .stat-label {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 /* CTA Section */
@@ -527,21 +532,22 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
-  padding: 4rem;
+  padding: 3rem 2rem;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 1s ease;
 }
 
 .cta-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .cta-text {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .btn-cta {
@@ -550,6 +556,8 @@
   padding: 1.25rem 2.5rem;
   font-size: 1.125rem;
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+  width: 100%;
+  max-width: 300px;
 }
 
 .btn-cta:hover {
@@ -558,42 +566,212 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 3rem;
+    padding: 6rem 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .home-container {
+    margin-top: 60px;
+  }
+
   .hero-section {
     grid-template-columns: 1fr;
-    padding: 4rem 1rem;
-    gap: 3rem;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-content {
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.875rem 1.5rem;
   }
 
   .hero-image {
-    height: 300px;
+    display: none;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .features-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .tech-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .tech-item {
+    padding: 1.25rem;
+  }
+
+  .tech-logo {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .stats-section {
+    padding: 3rem 1.5rem;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem;
+  }
+
+  .cta-section {
+    padding: 4rem 1.5rem;
   }
 
   .cta-content {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
   }
 
-  .cta-title {
+  /* Reduce background circles on mobile */
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -150px;
+  }
+
+  .circle-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -125px;
+    left: -125px;
+  }
+
+  .circle-3 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    margin-top: 50px;
+  }
+
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+  }
+
+  .features-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .tech-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .stats-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
     font-size: 1.75rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,17 +1,36 @@
 import { useEffect, useState } from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from "react-router-dom";
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const predictionUrl = 'https://predict-employee-salary.streamlit.app';
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Listen for authentication state changes
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
   }, []);
 
-  const handlePredictionClick = () => {
-    window.open(predictionUrl, '_blank', 'noopener,noreferrer');
+  const handleGetStarted = () => {
+    if (user) {
+      // User is logged in, navigate to user-input
+      navigate("/user-input");
+    } else {
+      // User is not logged in, navigate to login
+      navigate("/login");
+    }
   };
 
   return (
@@ -41,15 +60,17 @@ const Home = () => {
           </p>
           
           <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={handlePredictionClick}>
-              <span>Get Started</span>
+            <button 
+              className="btn btn-primary" 
+              onClick={handleGetStarted}
+              disabled={loading}
+            >
+              <span>{loading ? "Loading..." : "Get Started"}</span>
               <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <button className="btn btn-secondary">
-              <span>Learn More</span>
-            </button>
+           
           </div>
         </div>
 
@@ -114,7 +135,7 @@ const Home = () => {
           <div className="feature-card">
             <div className="feature-icon gradient-4">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2"/>
+                <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2"/>
                 <path d="M3 10H21" stroke="currentColor" strokeWidth="2"/>
               </svg>
             </div>
@@ -201,8 +222,12 @@ const Home = () => {
           <p className="cta-text">
             Experience intelligent salary estimation powered by advanced machine learning algorithms
           </p>
-          <button className="btn btn-cta" onClick={handlePredictionClick}>
-            <span>Start Prediction</span>
+          <button 
+            className="btn btn-cta" 
+            onClick={handleGetStarted}
+            disabled={loading}
+          >
+            <span>{loading ? "Loading..." : "Start Prediction"}</span>
             <svg className="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

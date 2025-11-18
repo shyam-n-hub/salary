@@ -75,7 +75,7 @@ export default function Signup() {
         createdAt: new Date().toISOString()
       });
 
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         setErrorMsg("Email already in use. Please login instead.");
@@ -106,7 +106,7 @@ export default function Signup() {
         createdAt: new Date().toISOString()
       });
 
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       setErrorMsg("Google signup failed. Please try again.");
       setIsLoading(false);
@@ -117,7 +117,7 @@ export default function Signup() {
   return (
     <div className="signup-container">
       <form className="signup-card" onSubmit={handleSignup}>
-        <h2>Create Account ✨</h2>
+        <h2>Create Account </h2>
         <p className="signup-subtitle">Join PayPredictt and start predicting salaries</p>
 
         {errorMsg && (

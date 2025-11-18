@@ -20,7 +20,7 @@ export default function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       setErrorMsg("Invalid email or password. Please try again.");
       setIsLoading(false);
@@ -33,7 +33,7 @@ export default function Login() {
 
     try {
       await signInWithPopup(auth, provider);
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       setErrorMsg("Google login failed. Please try again.");
       setIsLoading(false);
@@ -44,7 +44,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <form className="login-card" onSubmit={handleLogin}>
-        <h2>Welcome Back 👋</h2>
+        <h2>Welcome Back </h2>
         <p className="login-subtitle">Sign in to continue to PayPredictt</p>
 
         {errorMsg && (

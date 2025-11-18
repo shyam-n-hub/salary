@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UserInput from "./pages/UserInput";
-import UserHistory from "./pages/History";
+import UserHistory from "./pages/UserHistory";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -31,7 +31,7 @@ function App() {
         {user && (
           <>
             <Route path="/user-input" element={<UserInput />} />
-            <Route path="/user-history" element={<History />} />
+            <Route path="/user-history" element={<UserHistory />} />
           </>
         )}
       </Routes>
