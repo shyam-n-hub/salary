@@ -44,6 +44,16 @@ const Navbar = ({ user }) => {
     return location.pathname === path ? "active" : "";
   };
 
+  useEffect(() => {
+  if (isMobileMenuOpen) {
+    document.body.classList.add('menu-open');
+  } else {
+    document.body.classList.remove('menu-open');
+  }
+  
+  return () => document.body.classList.remove('menu-open');
+}, [isMobileMenuOpen]);
+
   return (
     <>
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
