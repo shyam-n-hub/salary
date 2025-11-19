@@ -501,7 +501,7 @@ export default function UserInput() {
           <div className="results-section">
             <div className="salary-result">
               <div className="result-content">
-                <span className="result-label">Predicted Annual Salary</span>
+                <span className="result-label">Predicted Salary</span>
                 <h2 className="result-value">₹ {predictedSalary.toLocaleString('en-IN')}</h2>
               </div>
             </div>

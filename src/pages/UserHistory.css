@@ -540,7 +540,6 @@
 @media (max-width: 480px) {
   .history-container {
     padding: 1.5rem 0.75rem;
-    margin-top: 10px;
   }
 
   .history-card {
